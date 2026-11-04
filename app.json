@@ -1,0 +1,67 @@
+{
+  "expo": {
+    "name": "CampusGPT – Smart LPU Companion",
+    "slug": "campusgpt-lpu",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1E3A8A"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.lpu.campusgpt",
+      "infoPlist": {
+        "NSCameraUsageDescription": "CampusGPT requires camera access to scan campus QR codes and take photos for Lost & Found.",
+        "NSPhotoLibraryUsageDescription": "CampusGPT requires photo library access to upload documents and study notes.",
+        "NSLocationWhenInUseUsageDescription": "CampusGPT requires your location to provide interactive walking navigation on the LPU campus.",
+        "NSSpeechRecognitionUsageDescription": "Allow $(PRODUCT_NAME) to use speech recognition.",
+        "NSMicrophoneUsageDescription": "Allow $(PRODUCT_NAME) to use the microphone."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#1E3A8A"
+      },
+      "package": "com.lpu.campusgpt",
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.NOTIFICATIONS",
+        "android.permission.RECORD_AUDIO"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow CampusGPT to use your location for LPU campus navigation."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to let you share notes and lost items."
+        }
+      ],
+      "expo-font",
+      "expo-speech-recognition"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "f4a5fec2-501b-4d39-8d43-8f8fd4fb84b4"
+      }
+    }
+  }
+}
